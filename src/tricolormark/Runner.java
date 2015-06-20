@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Runner {
 
-	static Objeto[][] memoria = new Objeto[10][10];
+	private static Objeto[][] memoria = new Objeto[10][10];
 
-	public static void main(String[] args) {
+	private static void main(String[] args) {
 		preencherMemoria();
 
 		for (int i = 0; i < memoria.length; i++) {
@@ -19,7 +19,7 @@ public class Runner {
 		
 	}
 
-	public static void preencherMemoria() {
+	private static void preencherMemoria() {
 
 		for (int i = 0; i < memoria.length; i++) {
 			for (int j = 0; j < memoria.length; j++) {
@@ -51,7 +51,7 @@ public class Runner {
 
 	}
 	
-	public static void transformarBrancoEmCinza(Objeto objeto) {
+	private static void transformarBrancoEmCinza(Objeto objeto) {
 		if(objeto.getObjeto() != null)
 			if(objeto.getObjeto().getCor() == Cor.BRANCO) {
 				objeto.getObjeto().setCor(Cor.CINZA);
@@ -60,7 +60,7 @@ public class Runner {
 		
 	}
 
-	public static void transformarCinzaEmPreto(Objeto objeto) {
+	private static void transformarCinzaEmPreto(Objeto objeto) {
 		if(objeto.getObjeto() != null)
 			if(objeto.getObjeto().getCor() == Cor.CINZA) {
 				objeto.setCor(Cor.PRETO);
